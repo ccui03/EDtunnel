@@ -734,7 +734,7 @@ ${vlessSec}
 	const htmlHead = `
   <head>
 	<title>EDtunnel: VLESS configuration</title>
-	<meta name='description' content='This is a tool for generating VLESS protocol configurations. Give us a star on GitHub https://github.com/3Kmfi6HP/EDtunnel if you found it useful!'>
+	<meta name='description' content='This is a tool for generating VLESS'>
 	<meta name='keywords' content='EDtunnel, cloudflare pages, cloudflare worker, severless'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta property='og:site_name' content='EDtunnel: VLESS configuration' />
@@ -745,9 +745,7 @@ ${vlessSec}
 	<meta property='og:image' content='https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${encodeURIComponent(`vless://${userIDs.split(",")[0]}@${hostName}${commonUrlPart}`)}' />
 	<meta name='twitter:card' content='summary_large_image' />
 	<meta name='twitter:title' content='EDtunnel - VLESS configuration and subscribe output' />
-	<meta name='twitter:description' content='Use cloudflare pages and worker severless to implement vless protocol' />
 	<meta name='twitter:url' content='https://${hostName}/' />
-	<meta name='twitter:image' content='https://cloudflare-ipfs.com/ipfs/bafybeigd6i5aavwpr6wvnwuyayklq3omonggta4x2q7kpmgafj357nkcky' />
 	<meta property='og:image:width' content='1500' />
 	<meta property='og:image:height' content='1500' />
 
