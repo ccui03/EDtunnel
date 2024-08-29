@@ -4,7 +4,7 @@ import { connect } from 'cloudflare:sockets';
 // How to generate your own UUID:
 // [Windows] Press "Win + R", input cmd and run:  Powershell -NoExit -Command "[guid]::NewGuid()"
 let userID = '68809c72-b917-490c-b8cd-e07dfe99fc2a';
-
+// proxyIP主要是为了转发请求到部署在CF上的网站使用的，可以使用以下域名
 const proxyIPs = ['cdn.xn--b6gac.eu.org', 'cdn-all.xn--b6gac.eu.org', 'workers.bestip.one'];
 
 // if you want to use ipv6 or single proxyIP, please add comment at this line and remove comment at the next line
