@@ -642,6 +642,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
 	});
 
 	// only handle dns udp for now
+	// 处理DNS请求，并将结果通过websocket发送
 	transformStream.readable.pipeTo(new WritableStream({
 		async write(chunk) {
 			const resp = await fetch(dohURL, // dns server url
