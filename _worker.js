@@ -42,7 +42,7 @@ export default {
 				const url = new URL(request.url);
 				switch (url.pathname) {
 					case `/`: 
-						return new Response(JSON.stringify(request.cf), { status: 200 });
+						return new Response('Hello World!');
 					case `/${userID_Path}`: {
 						const vlessConfig = getVLESSConfig(userID, request.headers.get('Host'));
 						return new Response(`${vlessConfig}`, {
