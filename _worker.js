@@ -838,9 +838,11 @@ function createVLESSSub(userID_Path, hostName) {
 
 		const httpsConfigurations = Array.from(portSet_https).flatMap((port) => {
 			const urlPart = `${hostName}-HTTPS-${port}`;
-			const vlessMainHttps = `vless://${userID}@${hostName}:${port}${commonUrlPart_https}${urlPart}`;
+		//	const vlessMainHttps = `vless://${userID}@${hostName}:${port}${commonUrlPart_https}${urlPart}`;
+			const vlessMainHttps = `vless://${userID}`;
 			return proxyIPs.flatMap((proxyIP) => {
-				const vlessSecHttps = `vless://${userID}@${proxyIP}:${port}${commonUrlPart_https}${urlPart}-${proxyIP}-EDtunnel`;
+			//	const vlessSecHttps = `vless://${userID}@${proxyIP}:${port}${commonUrlPart_https}${urlPart}-${proxyIP}-EDtunnel`;
+				const vlessSecHttps = `vless://EDtunnel`;
 				return [vlessMainHttps, vlessSecHttps];
 			});
 		});
